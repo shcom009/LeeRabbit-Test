@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#ffd9e3">
+<title>이토끼 게임 시리즈</title>
+<meta name="description" content="이토끼 룰렛과 퍼즐 맞추기를 즐겨보세요.">
+<link rel="icon" href="rabbit_female_icon.svg" type="image/svg+xml">
+<link rel="manifest" href="manifest.webmanifest">
+<style>
+:root{--pink:#ff5f87;--pink2:#ff91aa;--ink:#5b2632;--cream:#fffaf8;--line:#ffd5df;--orange:#ff9e13;--orange2:#ffbf40}
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;font-family:Arial,"Noto Sans KR",sans-serif;color:var(--ink)}body{background:linear-gradient(#ffe1e9 0,#fff8f9 58%,#fff 100%);padding:20px 14px 30px}.app{width:min(100%,430px);margin:0 auto}.hero{position:relative;padding:18px 10px 12px;text-align:center;overflow:hidden}.hero:before,.hero:after{content:"♥";position:absolute;color:#ff9eb4;font-size:26px;opacity:.7}.hero:before{left:12px;top:44px}.hero:after{right:22px;top:18px}.title{margin:0;color:#ef3c70;font-size:38px;line-height:1.03;font-weight:900;letter-spacing:-2px;text-shadow:0 3px 0 white,0 5px 12px #ffc2d1}.sub{margin:14px 0 0;font-size:15px;line-height:1.55;color:#6d3945}.mascot{width:118px;height:118px;margin:4px auto -2px;display:block;filter:drop-shadow(0 8px 10px rgba(190,90,120,.16))}.games{display:grid;gap:14px}.game-card{display:grid;grid-template-columns:92px 1fr;gap:14px;align-items:center;padding:16px;border-radius:24px;background:rgba(255,255,255,.86);border:1px solid var(--line);box-shadow:0 10px 22px rgba(186,94,118,.10)}.game-card.puzzle{background:linear-gradient(135deg,#fffef7,#fff3cf);border-color:#ffd37c}.icon-wrap{width:88px;height:88px;border-radius:50%;display:grid;place-items:center;background:#ffe1e9;border:2px solid #ffb9c9;overflow:hidden}.icon-wrap img{width:100%;height:100%;object-fit:cover}.puzzle-icon{width:68px;height:68px;display:grid;grid-template-columns:repeat(2,1fr);gap:3px;transform:rotate(-4deg)}.puzzle-icon span{display:grid;place-items:center;border-radius:7px;background:#bfe4ff;border:2px solid #76b9e9;font-size:23px}.puzzle-icon span:nth-child(2),.puzzle-icon span:nth-child(3){background:#ffd1dc;border-color:#ff9bb1}.game-no{display:inline-grid;place-items:center;width:31px;height:31px;margin-right:7px;border-radius:50%;background:#ff5f87;color:#fff;font-weight:900}.puzzle .game-no{background:#ff9e13}.game-title{font-size:22px;font-weight:900;letter-spacing:-.7px;margin-bottom:8px}.game-desc{font-size:14px;line-height:1.5;color:#75414c;margin:0 0 12px}.actions{display:flex;justify-content:flex-end}.start{border:0;border-radius:14px;padding:11px 20px;font-size:16px;font-weight:900;color:white;background:linear-gradient(#ff7c9b,#f34775);box-shadow:0 5px 0 #d93965;cursor:pointer;text-decoration:none}.puzzle .start{background:linear-gradient(var(--orange2),var(--orange));box-shadow:0 5px 0 #e48500}.start:active{transform:translateY(3px);box-shadow:0 2px 0 #c64a66}.bottom{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:18px}.tool{border:1px solid var(--line);background:#fff9fa;border-radius:18px;padding:13px 8px;font-size:14px;font-weight:800;color:#6a3340;cursor:pointer;box-shadow:0 6px 15px rgba(178,90,112,.08)}.tool .emoji{display:block;font-size:28px;margin-bottom:5px}.footer{text-align:center;margin-top:16px;font-size:11px;color:#a57682}.modal{position:fixed;inset:0;background:rgba(78,31,43,.38);display:none;align-items:center;justify-content:center;padding:20px;z-index:20}.modal.show{display:flex}.panel{width:min(92vw,390px);background:white;border-radius:24px;padding:22px;box-shadow:0 20px 55px rgba(88,34,49,.25)}.panel h2{margin:0 0 14px;color:#e74570}.empty{background:#fff4f7;border-radius:16px;padding:20px;text-align:center;color:#9b6d78}.close{margin-top:16px;width:100%;border:0;border-radius:13px;padding:12px;background:#ff668b;color:#fff;font-weight:900;font-size:15px}.reward-row{display:flex;justify-content:space-between;align-items:center;padding:11px 4px;border-bottom:1px solid #f3dce2}.badge{font-weight:900;color:#e64470}@media(max-width:390px){.title{font-size:34px}.game-card{grid-template-columns:82px 1fr;padding:14px;gap:11px}.icon-wrap{width:80px;height:80px}.game-title{font-size:20px}.start{padding:10px 16px}}
+</style>
+</head>
+<body>
+<main class="app">
+<section class="hero">
+<h1 class="title">이토끼 게임<br>시리즈</h1>
+<p class="sub">귀엽고 재미있는 게임을<br>골라서 즐겨요!</p>
+<img class="mascot" src="rabbit_female_icon.svg" alt="분홍 리본을 단 토끼">
+</section>
+<section class="games" id="gameList">
+<article class="game-card" data-game="roulette">
+<div class="icon-wrap"><img src="rabbit_female_icon.svg" alt="이토끼 룰렛"></div>
+<div><div class="game-title"><span class="game-no">1</span>이토끼 룰렛</div><p class="game-desc">룰렛을 돌려 다양한 보상을 받아보세요!</p><div class="actions"><a class="start" href="https://shcom009.github.io/LeeRabbit/">시작하기</a></div></div>
+</article>
+<article class="game-card puzzle" data-game="puzzle">
+<div class="icon-wrap"><div class="puzzle-icon" aria-hidden="true"><span>🐰</span><span>🌸</span><span>💗</span><span>🧩</span></div></div>
+<div><div class="game-title"><span class="game-no">2</span>퍼즐 맞추기</div><p class="game-desc">조각을 맞춰 그림을 완성해요!</p><div class="actions"><a class="start" href="puzzle.html">시작하기</a></div></div>
+</article>
+</section>
+<section class="bottom">
+<button class="tool" id="rewardBtn"><span class="emoji">🎁</span>내 보상함</button>
+<button class="tool" id="soundBtn"><span class="emoji" id="soundIcon">🔊</span><span id="soundText">소리 ON</span></button>
+</section>
+<div class="footer">© 2026 LeeRabbit Games · TEST</div>
+</main>
+<div class="modal" id="rewardModal" role="dialog" aria-modal="true" aria-labelledby="rewardTitle"><div class="panel"><h2 id="rewardTitle">🎁 내 보상함</h2><div id="rewardBody"></div><button class="close" id="closeReward">닫기</button></div></div>
+<script>
+const KEY_REWARDS='leerabbitRewards';const KEY_SOUND='leerabbitSound';
+const modal=document.getElementById('rewardModal'),body=document.getElementById('rewardBody');
+function getRewards(){try{return JSON.parse(localStorage.getItem(KEY_REWARDS)||'{}')}catch{return {}}}
+function renderRewards(){const r=getRewards(),entries=Object.entries(r).filter(([,n])=>Number(n)>0);body.innerHTML=entries.length?entries.map(([name,n])=>`<div class="reward-row"><span>${name}</span><span class="badge">× ${n}</span></div>`).join(''):'<div class="empty">아직 받은 보상이 없어요.<br>게임을 즐기고 보상을 모아보세요! 🐰</div>'}
+document.getElementById('rewardBtn').onclick=()=>{renderRewards();modal.classList.add('show')};document.getElementById('closeReward').onclick=()=>modal.classList.remove('show');modal.onclick=e=>{if(e.target===modal)modal.classList.remove('show')};
+let sound=localStorage.getItem(KEY_SOUND)!=='off';function paintSound(){document.getElementById('soundIcon').textContent=sound?'🔊':'🔇';document.getElementById('soundText').textContent=sound?'소리 ON':'소리 OFF'}paintSound();document.getElementById('soundBtn').onclick=()=>{sound=!sound;localStorage.setItem(KEY_SOUND,sound?'on':'off');paintSound()};
+if('serviceWorker' in navigator)window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js'));
+</script>
+</body>
+</html>
